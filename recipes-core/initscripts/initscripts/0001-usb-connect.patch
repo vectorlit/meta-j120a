@@ -1,0 +1,14 @@
+--- a/bootmisc.sh
++++ b/bootmisc.sh
+@@ -58,6 +58,11 @@
+ fi
+ 
+ #
++# Turn USB on
++#
++echo connect > /sys/class/udc/13580000.usb/soft_connect
++
++#
+ # This is as good a place as any for a sanity check
+ #
+ # Set the system clock from hardware clock

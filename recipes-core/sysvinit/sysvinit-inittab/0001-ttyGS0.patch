@@ -1,0 +1,7 @@
+--- a/inittab
++++ b/inittab
+@@ -28,3 +28,4 @@
+ l6:6:wait:/etc/init.d/rc 6
+ # Normally not reached, but fallthrough in case of emergency.
+ z6:6:respawn:/sbin/sulogin
++GS0:345:respawn:/sbin/getty -w -L 115200 ttyGS0 linux
