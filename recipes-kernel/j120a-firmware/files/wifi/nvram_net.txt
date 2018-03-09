@@ -1,6 +1,4 @@
-# NVRAM file for NEW J1 Rev 0.0 2015/10/12
-# Target power modification to 11b/g/n
-
+# NVRAM file for O5 Rev0.1 murata filter matching value - 20150923
 # 2.4 GHz, 20 MHz BW mode
 
 # The following parameter values are just placeholders, need to be updated.
@@ -19,42 +17,35 @@ xtalfreq=37400
 nocrc=1
 ag0=0
 aa2g=1
-ccode=GB
-
+ccode=US
+regrev=988
 pa0itssit=0x20
 extpagain2g=0
 
-#PA parameters for 2.4GHz, measured at 2.4g Filter out_0618, 0924 TSSI Calibration
-#pa2ga0=0xFF62,0x19F2,0xFCFD
-#NEW CAL
-pa2ga0=0xFF60,0x1925,0xFD29
+#PA parameters for 2.4GHz, measured at antenna port
+#pa2ga0=0xFF59,0x1852,0xFD35
+pa2ga0=0xFF59,0x1952,0xFD20
 
-#pa2ga0_2pwr=0xFF5A,0x1203,0xFD9E
-#NEW CAL
-pa2ga0_2pwr=0xFD9A,0xF25B,0x12B 
-
-pmin=0 
+#pa2ga0_2pwr=0xFF10,0x11B7,0xFDC7
+pa2ga0_2pwr=0xFF10,0x12B7,0xFDA9
+pmin=0
 pmax=40
 
 AvVmid_c0=0x0,0xc8
-cckpwroffset0=2
+cckpwroffset0=0
 
-# Target power modification to 11b/g/n, 2015/10/12
-# Max target power is 17dBm = 74/4 - 1.5dB
+# PPR params
 maxp2ga0=74
 txpwrbckof=6
-# 11b : 16dBm for All rates
-cckbw202gpo=0x2222
-# 11g : 14dBm
-legofdmbw202gpo=0x66666666
-# 11n :14dBm
+cckbw202gpo=0
+legofdmbw202gpo=0x44444444
 mcsbw202gpo=0x66666666
 propbw202gpo=0xdd
 
 #CH12 CH13 Power Limit
 #fccpwrch12=10
 #fccpwrch13=1
-#fccpwroverride=0 
+#fccpwroverride=0
 
 # OFDM IIR :
 ofdmdigfilttype=17
@@ -75,21 +66,14 @@ muxenab=0x10
 #cldo_pwm=0x4
 
 #VCO freq 326.4MHz
-spurconfig=0x3 
+spurconfig=0x3
 
 #edonthd20l = -65
 #edoffthd20ul = -71
 btc_params95=8
-btc_params6=5
 
 edonthd20l=-65
 edoffthd20ul=-71
 
 txpwroffset2g=0,0,0,0,0,0,0,0,0,0,0,0,0
 #rssicornorm=-2
-
-#CH12 CH13 Power Limit
-fccpwrch12=30
-fccpwrch13=30
-fccpwroverride=0
-

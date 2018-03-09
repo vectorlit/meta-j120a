@@ -30,14 +30,14 @@
 inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
 
-SRC_URI = "git://github.com/LONELY-WOLF/kernel-j120f.git;protocol=git;bareclone=1;branch=${KBRANCH}"
+SRC_URI = "git://github.com/vectorlit/kernel-j120a.git;protocol=git;bareclone=1;branch=${KBRANCH}"
 
 SRC_URI += "file://defconfig"
 
-SRC_URI += "file://j120f.scc \
-            file://j120f.cfg \
-            file://j120f-user-config.cfg \
-            file://j120f-user-patches.scc \
+SRC_URI += "file://j120a.scc \
+            file://j120a.cfg \
+            file://j120a-user-config.cfg \
+            file://j120a-user-patches.scc \
            "
 
 
@@ -52,4 +52,4 @@ SRCREV="${AUTOREV}"
 
 PV = "${LINUX_VERSION}+git${SRCPV}"
 
-COMPATIBLE_MACHINE_j120f = "j120f"
+COMPATIBLE_MACHINE_j120a = "j120a"

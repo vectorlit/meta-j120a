@@ -1,17 +1,17 @@
 #
-# The top-level 'feature' for the j120f custom kernel.
+# The top-level 'feature' for the j120a custom kernel.
 #
 # Essentially this is a convenient top-level container or starting
 # point for adding lower-level config fragements and features.
 #
 
-# j120f.cfg in the linux-yocto-custom subdir is just a
+# j120a.cfg in the linux-yocto-custom subdir is just a
 # convenient place for adding random config fragments.
 
-kconf hardware j120f.cfg
+kconf hardware j120a.cfg
 
 # These are used by yocto-kernel to add config fragments and features.
 # Don't remove if you plan on using yocto-kernel with this BSP.
 
-kconf hardware j120f-user-config.cfg
-include j120f-user-patches.scc
+kconf hardware j120a-user-config.cfg
+include j120a-user-patches.scc
